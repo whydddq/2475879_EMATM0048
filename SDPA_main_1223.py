@@ -26,7 +26,7 @@ def main():
 
      for day in range(1,days+1):
             print(f"====== Simulation Day {day} ======")
-            market.generate_daily_price()
+            market.generate_daily_price(day)  # add "day" to help to run the data
             
             market.visualize_SDPA_price()
             for user in users:
