@@ -139,13 +139,16 @@ class Market:
 
         self.record_SDPA_price.append(self.SDPA_price)
         
-    def generate_daily_price(self):
+    def generate_daily_price(self,day):
         # daily return is draw from normal distribution N(0.003,0.0016)
-        mean=0.003
-        gen=0.0016
-        self.daily_return=random.gauss(mean,gen)
-        self.t_price=self.SDPA_price
-        self.SDPA_price=round(self.SDPA_price+self.t_price*self.daily_return,1)
+        if day==1:
+            self.SDPA_price=40
+        else:
+            mean=0.003
+            gen=0.0016**0.5  # correct the code:  N(0.003,0.0016) ,the "0.0016" is the variance not the standard variance
+            self.daily_return=random.gauss(mean,gen)
+            self.t_price=self.SDPA_price
+            self.SDPA_price=round(self.SDPA_price+self.t_price*self.daily_return,1)
         self.electricity_price=round(random.uniform(1.9,2.1),2)   # Let the electricity bill remain two decimal places to simplyfy the game
 
 
