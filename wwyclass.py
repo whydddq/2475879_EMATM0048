@@ -171,6 +171,7 @@ def visualization(market, users):
     plt.title('User Asset Value')
     plt.xlabel('Day')
     plt.ylabel('Asset Value')
+    plt.legend()    # Add a legend to identify the value asset belongs to whitch user
     plt.show()
 
 
