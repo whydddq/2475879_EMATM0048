@@ -51,6 +51,8 @@ def main():
                       users.remove(user)  
             for user in users:
                   handle_user_actions(user,users,market)
+     for user in users:
+        user.visualize_asset(market)        # add the code to ensure the plot of users' asset is right, or the result will not be the end of the last day, it will be the begin of the last day
      visualization(market, users)
      print("game is over")
            
