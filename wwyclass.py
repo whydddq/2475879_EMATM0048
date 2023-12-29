@@ -1,10 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Dec 22 20:59:16 2023
-
-@author: guzhemeimao
-"""
 # create my class include user account, blockchain system and market
 # define the user account class
 class useraccount:
