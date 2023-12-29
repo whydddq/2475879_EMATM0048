@@ -1,11 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Dec 23 22:04:57 2023
-
-@author: guzhemeimao
-"""
-
 from wwyclass import *
 
 
