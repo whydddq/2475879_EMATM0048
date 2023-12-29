@@ -1,20 +1,55 @@
-# create my class include user account, blockchain system and market
-# define the user account class
+"""
+name: wenying wang
+section: Part 1. class
+There are all the classes and functions i will need in the main product.
+"""
+"""
+Firstly, create my class include user account, blockchain system and market
+"""
+"""
+define the user account class
+"""
 class useraccount:
-    # manages user name, GBP capital, SDPA balance, and mining machines. 
+    
     def __init__(self, user_name, GBP_capital=10000, SDPA_balance=0, mining_machines=0):
-        self.users_asset=[] # create a empty list to record the history of users' asset value
+"""
+    Managing user name, GBP capital, SDPA balance, and mining machines.
+    Attributes:
+    users_asset(list): A empty list to record the history of users' asset value.
+    user_name(string): The name of user.
+    GBP_capital(float): The capital of user.
+    SDPA_balance(float): The number of SDPA which belongs to the user.
+    mining_machines(int): The number of mining machines belongs to the user.
+    instance(bool): This is to control the status of the instance
+    Raises:
+    ValueError: If the type of the attributes is incorrect.
+"""
+        self.users_asset=[] 
         self.user_name=user_name
         self.GBP_capital=GBP_capital
         self.SDPA_balance=SDPA_balance
         self.mining_machines=mining_machines
-        # this is to control the status of the instance
         self.instance=True
     def visualize_asset(self, market):
-        asset_value=self.GBP_capital+self.SDPA_balance*market.SDPA_price
+"""
+    calculate and record the asset value of user to help visualize.
+    Args:
+    market: Provide the current SDPA price.
+    Raises:
+    ValueError: If the SDPA_price's type is not float or int, but it can be avoided in the following coding.
+"""
+        asset_value=self.GBP_capital+self.SDPA_balance*market.SDPA_price+300*self.mining_machines
+"""
+Due to the game's settings, if users do not sell their machines, the machines can run indefinitely. 
+Therefore, it can be assumed that there is no depreciation for the machines. 
+So, i can use 300 GBP to calculate the value of each machine.
+"""
         self.users_asset.append(asset_value)
   
     def buy_SDPA_trade(self,market):
+"""
+    
+"""
 
         num_action_buy=float(input(">>> Enter number of SDPA to buy:"))
         total_cost=num_action_buy*market.SDPA_price
