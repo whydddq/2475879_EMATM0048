@@ -48,7 +48,7 @@ So, i can use 300 GBP to calculate the value of each machine.
   
     def buy_SDPA_trade(self,market):
 """
-    
+    Executes a buying transaction for SDPA using GBP capital in the user's account.  
 """
 
         num_action_buy=float(input(">>> Enter number of SDPA to buy:"))
@@ -61,7 +61,9 @@ So, i can use 300 GBP to calculate the value of each machine.
         else:
          print("GBP is insufficient,fail to buy")
     def sell_SDPA_trade(self,market):
-        
+"""
+    Executes a selling transaction for SDPA using GBP capital in the user's account.  
+"""        
         num_action_sell=float(input(">>> Enter number of SDPA to sell:"))
         total_profit =num_action_sell*market.SDPA_price
 
@@ -74,7 +76,9 @@ So, i can use 300 GBP to calculate the value of each machine.
         else:
          print("SDPA is insufficient,fail to sell")
     def buy_machine_trade(self,market):
-       
+"""
+    Executes a buying transaction for mining machines using GBP capital in the user's account.  
+"""       
         num_action_buy_ASIC=int(input(">>> Enter number of ASIC to buy:"))
         total_cost=num_action_buy_ASIC*600
 
@@ -88,7 +92,9 @@ So, i can use 300 GBP to calculate the value of each machine.
            print("GBP is insufficient,fail to buy")
        
     def sell_machine_trade(self,market):
-
+"""
+    Executes a selling transaction for mining machines using GBP capital in the user's account.  
+"""  
        num_action_sell_ASIC=int(input(">>> Enter number of ASIC to sell:"))
        total_profit=num_action_sell_ASIC*300
 
