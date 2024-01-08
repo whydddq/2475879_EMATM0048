@@ -1,6 +1,10 @@
+"""
+name: wenying wang
+section: Part 1. main
+The main feacture to run the simulation game
+"""
+
 from wwyclass import *
-
-
 
 def main():
      market=Market()
