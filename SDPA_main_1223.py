@@ -6,11 +6,23 @@ def main():
      market=Market()
      users=[]  # initialize an empty list for users   
      user_names=[]
-     days=int( input(" Please enter number of Days to simulate:"))
-     if days<7:
-         print("The number of Days to simulate is too small")
-         days=int( input(" Please enter number of Days to simulate:"))
-     num_users=int( input(" Please enter number of Users: "))
+     while True:
+         try:
+            days = int(input("Please enter the number of Days to simulate: "))
+            if days < 7:
+                print("The number of Days to simulate is too small. Please try again.")
+                continue
+            else:
+                break  
+          except ValueError:
+            print("Invalid input. Please enter a number.")
+     while True:
+           try:
+              num_users = int(input("Please enter number of Users: "))
+              break
+           except ValueError:
+              print("Invalid input. Please enter a number.")
+     
     
      for i in range(num_users):
            while True:
