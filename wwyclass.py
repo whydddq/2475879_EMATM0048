@@ -252,6 +252,8 @@ def handle_user_actions(user,users,market):
                   visualization(market, users)
             except ValueError:
                    print("invalid input, input again")
+        else:
+            print("invalid input, input again")
         
         
         
