@@ -5,6 +5,7 @@ from wwyclass import *
 def main():
      market=Market()
      users=[]  # initialize an empty list for users   
+     user_names=[]
      days=int( input(" Please enter number of Days to simulate:"))
      if days<7:
          print("The number of Days to simulate is too small")
@@ -12,8 +13,14 @@ def main():
      num_users=int( input(" Please enter number of Users: "))
     
      for i in range(num_users):
-        user_name=input(f"Please enter the name of User{i+1}: ")
-        users.append(useraccount(user_name))
+           while True:
+            user_name_raw=input(f"Please enter the name of User{i+1}: ")
+            if user_name_raw in user_names:
+                print("invalid input, input again")
+            else:
+                user_names.append(user_name_raw)
+                users.append(useraccount(user_name_raw))
+                break
      run_blockchain=blockchain_system() 
 
      for day in range(1,days+1):
