@@ -1,5 +1,7 @@
 # SDPA_coursework
-https://github.com/whydddq/SDPA_coursework
+https://github.com/whydddq/2475879_EMATM0048
+
+
 
 In Part 1 of the coursework, I need to utilize object-oriented design principles in Python to create a simulation game about a virtual currency called SDPACoin.
 
