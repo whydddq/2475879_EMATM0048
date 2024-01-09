@@ -23,3 +23,5 @@ Bonus question:
 1. From running my simulation game, I observed that once users choose to purchase the mining machines, they would almost end up with losing money when the set simulation days are short. Only in sufficiently long time simulation days, users can earn money in the system. Therefore, I think that we should be cautious about the decision whether to buy the mining machines, and it is better to hold them for the long term once buying them.
 2. I found that individuals’ actions have a limited influence on the whole virtual currency market.
 3. The cryptocurrency market is highly unpredictable with significant investing risk. For example, the daily price of virtual currencies and electricity costs are all randomly generated, which makes it impossible to make a reliable prediction about the market.
+
+For Part 2, users need to install the yfinance library through typing and executing "pip install yfinance" in the Command Line Interface firstly.
