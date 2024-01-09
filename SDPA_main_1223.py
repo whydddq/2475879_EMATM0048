@@ -18,7 +18,7 @@ def main():
                 continue
             else:
                 break  
-          except ValueError:
+         except ValueError:
             print("Invalid input. Please enter a number.")
      while True:
            try:
