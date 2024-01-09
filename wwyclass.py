@@ -24,7 +24,7 @@ class useraccount:
         asset_value=self.GBP_capital+self.SDPA_balance*market.SDPA_price+300*self.mining_machines
 # Due to the game's settings, if users do not sell their machines, the machines can run indefinitely. 
 # Therefore, it can be assumed that there is no depreciation for the machines. 
-# So, i can use 300 GBP to calculate the value of each machine.
+# So, I can use 300 GBP to calculate the value of each machine.
         self.users_asset.append(asset_value)
   
     def buy_SDPA_trade(self,market):
