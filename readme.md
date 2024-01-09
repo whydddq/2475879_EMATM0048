@@ -24,4 +24,4 @@ Bonus question:
 2. I found that individuals’ actions have a limited influence on the whole virtual currency market.
 3. The cryptocurrency market is highly unpredictable with significant investing risk. For example, the daily price of virtual currencies and electricity costs are all randomly generated, which makes it impossible to make a reliable prediction about the market.
 
-For Part 2, users need to install the yfinance library through typing and executing "pip install yfinance" in the Command Line Interface firstly.
+For Part 2, users need to install the yfinance library through typing and executing "pip install yfinance" in the Command Line Interface first.
