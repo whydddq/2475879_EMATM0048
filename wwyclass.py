@@ -11,45 +11,26 @@ define the user account class
 """
 class useraccount:
     
-    def __init__(self, user_name, GBP_capital=10000, SDPA_balance=0, mining_machines=0):
-"""
-    Managing user name, GBP capital, SDPA balance, and mining machines.
-    Attributes:
-    users_asset(list): A empty list to record the history of users' asset value.
-    user_name(string): The name of user.
-    GBP_capital(float): The capital of user.
-    SDPA_balance(float): The number of SDPA which belongs to the user.
-    mining_machines(int): The number of mining machines belongs to the user.
-    instance(bool): This is to control the status of the instance
-    Raises:
-    ValueError: If the type of the attributes is incorrect.
-"""
+    def __init__(self, user_name, GBP_capital=10000, SDPA_balance=0, mining_machines=0):  #Managing user name, GBP capital, SDPA balance, and mining machines.
+
         self.users_asset=[] 
         self.user_name=user_name
         self.GBP_capital=GBP_capital
         self.SDPA_balance=SDPA_balance
         self.mining_machines=mining_machines
         self.instance=True
-    def visualize_asset(self, market):
-"""
-    calculate and record the asset value of user to help visualize.
-    Args:
-    market: Provide the current SDPA price.
-    Raises:
-    ValueError: If the SDPA_price's type is not float or int, but it can be avoided in the following coding.
-"""
+    def visualize_asset(self, market):  #calculate and record the asset value of user to help visualize.
+
         asset_value=self.GBP_capital+self.SDPA_balance*market.SDPA_price+300*self.mining_machines
-"""
-Due to the game's settings, if users do not sell their machines, the machines can run indefinitely. 
-Therefore, it can be assumed that there is no depreciation for the machines. 
-So, i can use 300 GBP to calculate the value of each machine.
-"""
+# Due to the game's settings, if users do not sell their machines, the machines can run indefinitely. 
+# Therefore, it can be assumed that there is no depreciation for the machines. 
+# So, i can use 300 GBP to calculate the value of each machine.
         self.users_asset.append(asset_value)
   
     def buy_SDPA_trade(self,market):
-"""
-    Executes a buying transaction for SDPA using GBP capital in the user's account.  
-"""
+
+   # Executes a buying transaction for SDPA using GBP capital in the user's account.  
+
 
         num_action_buy=float(input(">>> Enter number of SDPA to buy:"))
         total_cost=num_action_buy*market.SDPA_price
@@ -61,9 +42,9 @@ So, i can use 300 GBP to calculate the value of each machine.
         else:
          print("GBP is insufficient,fail to buy")
     def sell_SDPA_trade(self,market):
-"""
-    Executes a selling transaction for SDPA using GBP capital in the user's account.  
-"""        
+
+    # Executes a selling transaction for SDPA using GBP capital in the user's account.  
+     
         num_action_sell=float(input(">>> Enter number of SDPA to sell:"))
         total_profit =num_action_sell*market.SDPA_price
 
@@ -76,9 +57,9 @@ So, i can use 300 GBP to calculate the value of each machine.
         else:
          print("SDPA is insufficient,fail to sell")
     def buy_machine_trade(self,market):
-"""
-    Executes a buying transaction for mining machines using GBP capital in the user's account.  
-"""       
+
+    # Executes a buying transaction for mining machines using GBP capital in the user's account.  
+  
         num_action_buy_ASIC=int(input(">>> Enter number of ASIC to buy:"))
         total_cost=num_action_buy_ASIC*600
 
@@ -92,9 +73,9 @@ So, i can use 300 GBP to calculate the value of each machine.
            print("GBP is insufficient,fail to buy")
        
     def sell_machine_trade(self,market):
-"""
-    Executes a selling transaction for mining machines using GBP capital in the user's account.  
-"""  
+
+   # Executes a selling transaction for mining machines using GBP capital in the user's account.  
+ 
        num_action_sell_ASIC=int(input(">>> Enter number of ASIC to sell:"))
        total_profit=num_action_sell_ASIC*300
 
